@@ -14,6 +14,7 @@ The dataset includes:
 - **Race results from 2000 onward**
 - **Driver & team performance metrics**
 - **Weather conditions & track details**
+- NOTE : This dataset was prepared by me using the Ergast API
 
 ## 🚀 Installation & Usage
 ### 1️⃣ Clone the Repository
