@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Race Position Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>F1 Race Position Predictor</h1>
+        <form method="POST" action="/predict">
+            <label for="Points">Points:</label>
+            <input type="number" id="Points" name="Points" required><br>
+
+            <label for="Laps">Laps:</label>
+            <input type="number" id="Laps" name="Laps" required><br>
+
+            <label for="Season">Season:</label>
+            <input type="number" id="Season" name="Season" required><br>
+
+            <label for="Points_Laps">Points × Laps:</label>
+            <input type="number" id="Points_Laps" name="Points_Laps" required><br>
+
+            <label for="Points_Season">Points × Season:</label>
+            <input type="number" id="Points_Season" name="Points_Season" required><br>
+
+            <label for="Best_Position_Points">Best Position Points:</label>
+            <input type="number" id="Best_Position_Points" name="Best_Position_Points" required><br>
+
+            <label for="Driver">Driver Name (e.g., Verstappen):</label>
+            <input type="text" id="Driver" name="Driver_Verstappen"><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <h2>Predicted Position: {{ prediction }}</h2>
+        {% endif %}
+        
+        {% if error %}
+        <h2 style="color: red;">Error: {{ error }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
